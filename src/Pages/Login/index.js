@@ -1,5 +1,5 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from 'react';
+import { View, Text } from 'react-native';
 
 const Login = () => {
     return (
@@ -9,4 +9,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;
