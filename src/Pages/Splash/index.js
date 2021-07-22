@@ -13,7 +13,7 @@ const Splash = ({ navigation }) => {
     useEffect(() => {
         setTimeout(() => {
             handleLogin();
-        }, 1500);
+        }, 2500);
     }, []);
 
     return (
