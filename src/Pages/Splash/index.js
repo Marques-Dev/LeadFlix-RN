@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Logo, ImageBackground } from "./styles";
 import logo from "../../Assets/logot.png";
 import imageBackground from "../../Assets/splash.png";
-
+ 
 
 const Splash = ({ navigation }) => {
     const handleLogin = () => {
@@ -13,15 +13,13 @@ const Splash = ({ navigation }) => {
     useEffect(() => {
         setTimeout(() => {
             handleLogin();
-        }, 1500);
+        }, 2500);
     }, []);
-
-
 
     return (
         <Container>
             <Logo source={logo} />
-            <ImageBackground source={imageBackground}   />
+            <ImageBackground source={imageBackground} />
         </Container>
     );
 };
