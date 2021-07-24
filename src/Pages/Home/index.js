@@ -6,50 +6,82 @@ import {
 } from "./styles";
 import Carousel from './Carousel';
 import List from '../../Components/List';
-import api from '../../Services/api'
+import { GetFilmsTrending, GetFilmsNowPlaying, GetGenders, GetFilmsDiscover } from "../../Services/filmsApi";
 
 
-const apikey = 'api_key=e0f7ddbcb7a27757fee3f82310428f34';
-const language = 'language=pt-BR';
+
 
 
 const Home = () => {
-//guardado estado da lista
+  //guardado estado da lista
   const [listTrending, setListTrending] = useState([]);
+  const [listNowPlaying, setlistNowPlaying] = useState([]);
+  const [genders, setGenders] = useState([]);
+  const [discovers, setDiscovers] = useState([]);
 
-  const lista = [0, 1, 2, 3, 4, 5];
 
+  const getFilmsTrending = async () => {
+    const response = await GetFilmsTrending(1);
+    setlistNowPlaying(response.data.results);
+  };
 
-  const init = async () => {
-    const response = await api.get(
-      `trending/movie/week?${apikey}&${language}&page=${1}`
-      );
-      setListTrending(response.data.results);
-};
+  const getFilmsNowPlaying = async () => {
+    const response = await GetFilmsNowPlaying(1);
+    setListTrending(response.data.results);
+  };
 
-//disparando requisição quando entrar na rela de home
+  const getFilmsByGender = async () => {
+    const response = await GetGenders();
+    setGenders(response.data.genres);
+  };
+
+  const getFilmsDiscover = async () => {
+    const response = await GetFilmsDiscover(1);
+    setDiscovers(response.data.results);
+  };
+
+  //-----------------------------------------------
+  //disparando requisição quando entrar na rela de home
   useEffect(() => {
-    init(); 
+    getFilmsTrending();
+  }, []);
+
+  useEffect(() => {
+    getFilmsNowPlaying();
+  }, []);
+
+  useEffect(() => {
+    getFilmsByGender();
+  }, []);
+
+  useEffect(() => {
+    getFilmsDiscover();
   }, []);
 
   return (
     <Container>
 
       <ContainerCarousel>
-        <Carousel list={lista} />
+        <Carousel list={listTrending} />
       </ContainerCarousel>
 
       <ContainerList>
-        <List list={listTrending} title = "Filmes em Cartaz" trending={true}/>
+        <List list={listNowPlaying} title="Filmes Assistidos Agora" trending={true} />
       </ContainerList>
 
-      <ContainerList>
-        <List list={listTrending} title = "Filmes de Ação" />
-      </ContainerList>
+    
+      
+        {genders.map((item) => {
+          const title = `Filmes de ${item.name}`;
+          return (
+            <ContainerList key={`${item.id}`}>
+              <List list={listTrending} title={title} /> 
+            </ContainerList>
+          );
+        })}
 
-      <ContainerList>
-        <List list={listTrending} title = "Filmes de Comédia" />
-      </ContainerList>
+        
+
 
     </Container>
   );

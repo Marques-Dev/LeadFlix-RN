@@ -20,11 +20,11 @@ const Login = ({ navigation }) => {
     };
 
     const handleEsqSenha = () => {
-        alert('Esqueceu a senha validado')
+        alert('Esqueceu a senha - Alert')
     };
 
     const handleCriarConta = () => {
-        alert('Criar conta validado')
+        alert('Criar conta - Alert')
     };
 
 

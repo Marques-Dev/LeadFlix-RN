@@ -22,9 +22,10 @@ const Carousel = ({list}) => {
         pagingEnabled
         keyExtractor={(item, index) => `${item}_${index}`}
         renderItem={({ item }) => {
+            const uri = `https://image.tmdb.org/t/p/w342/${item.poster_path}`;
                 return (
                     <Item>
-                        <Image source={{ uri: 'https://img.assinaja.com/assets/tZ/004/img/157476_520x520.png' }} />
+                        <Image source={{ uri, }} />
 
 
                         <Gradient
