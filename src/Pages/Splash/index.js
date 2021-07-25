@@ -1,12 +1,27 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { useEffect } from "react";
+import { Container, Logo, ImageBackground } from "./styles";
+import logo from "../../Assets/logot.png";
+import imageBackground from "../../Assets/splash.png";
+ 
 
-const Splash = () => {
+const Splash = ({ navigation }) => {
+    const handleLogin = () => {
+        navigation.navigate("Login");
+    };
+
+    //utilizando o hook para definir ciclo de vida da tela 'splash'
+    useEffect(() => {
+        setTimeout(() => {
+            handleLogin();
+        }, 2500);
+    }, []);
+
     return (
-        <View>
-            <Text>Primeira tela emm</Text>
-        </View>
-    )
-}
+        <Container>
+            <Logo source={logo} />
+            <ImageBackground source={imageBackground} />
+        </Container>
+    );
+};
 
-export default Splash
+export default Splash;
