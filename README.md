@@ -13,7 +13,7 @@
   <li>Styled-Components -> Utilizado para estilização dos componentes </li>
   <li>React Navigation -> Utilizada para fazer as navegações da aplicação </li>
   <li>Axios -> Utilizado para realizar as chamadas a API </li>
-  <li>react-native-vector-icons -> Adicionar Iconec no APP </li>
+  <li>react-native-vector-icons -> Adicionar icones no APP </li>
   <li>expo-linear-gradient -> Efeitos visuais na aplicação</li>
 </ul>
 
