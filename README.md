@@ -20,8 +20,8 @@
 
 ## Iniciando a aplicação
 <ul>
-  <li> Clone o repositório </li>
   <li> Necessario ter o expo e um emulador mobile na maquina</li>
+  <li> Clone o repositório </li>
   <li> 1-> Executar npm install ou yarn </li>
   <li> 2-> expo start </li>
   <li> 3-> Abrir aplicação no emulaor </li>
