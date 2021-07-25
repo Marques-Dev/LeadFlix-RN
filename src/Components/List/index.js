@@ -14,7 +14,6 @@ const List = ({ list, title, trending }) => {
                 data={list}
                 keyExtractor={(item, index) => `${index}`}
                 horizontal
-                //passando estilização diretamente ao flatList
                 style={{ marginTop: 10 }}
                 renderItem={({ item }) => {
                     const uri = `https://image.tmdb.org/t/p/w342/${item.poster_path}`;
