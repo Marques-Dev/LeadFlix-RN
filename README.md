@@ -2,7 +2,7 @@
   Desafio
 </h1>
 
-![N|Solid](src/assets/imagesApp.png)
+<!--> ![N|Solid](src/assets/imagesApp.png) <-->
 
 <h4 align="center">APP para visulização de dados da API TMDB</h4>
 
