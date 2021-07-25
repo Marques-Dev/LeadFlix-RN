@@ -2,7 +2,6 @@
   Desafio
 </h1>
 
-<!--> ![N|Solid](src/assets/imagesApp.png) <-->
 
 <h4 align="center">APP para visulização de dados da API TMDB</h4>
 
@@ -12,7 +11,7 @@
   <li>Javasricpt</li>
 </ul>
 
-## Bibliotecas utilizadas
+## Bibliotecas 
 <ul>
   <li>Styled-Components -> Utilizado para estilização dos componentes </li>
   <li>React Navigation -> Utilizada para fazer as navegações da aplicação </li>
