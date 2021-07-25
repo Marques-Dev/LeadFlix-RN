@@ -1,6 +1,3 @@
-<h1 align="center">
-  Desafio
-</h1>
 
 
 <h4 align="center">APP para visulização de dados da API TMDB</h4>
