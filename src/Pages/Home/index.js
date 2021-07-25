@@ -70,18 +70,44 @@ const Home = () => {
       </ContainerList>
 
     
-      
         {genders.map((item) => {
+          
           const title = `Filmes de ${item.name}`;
           return (
             <ContainerList key={`${item.id}`}>
-              <List list={listTrending} title={title} /> 
+              <List list={listTrending} title={title}/>
             </ContainerList>
           );
         })}
 
-        
 
+        {listTrending.map((item) =>{
+          const filme = item.id;
+          const genero = item.genre_ids;
+          const results = genero.includes(28);
+         
+          // console.log(results);
+          
+          if (results == true) {
+            console.log(idAcao);
+          }
+
+        //   if(filme == 633954){
+        //     console.log(item.genre_ids[0]);
+        // }
+
+        })}
+
+
+        {/* {genders.map((item) => {
+          const id = ["28"];
+          id.("Ação") 
+
+          console.log(item);
+          
+        })} */}
+        
+        
 
     </Container>
   );
