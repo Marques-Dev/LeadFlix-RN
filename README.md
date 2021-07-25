@@ -21,14 +21,6 @@
   <li>expo-linear-gradient -> Efeitos visuais na aplicação</li>
 </ul>
 
-## Bibliotecas utilizadas para desenvolvimento
-<ul>
-  <li>Eslint -> Análise de código </li>
-  <li>Reactotron -> Utilizado para debugar a aplicação </li>
-  <li>Prettier -> Formatar código </li>
-  <li>Editor config -> Estilos de codificação </li>
-</ul>
-
 
 ## Iniciando a aplicação
 <ul>
