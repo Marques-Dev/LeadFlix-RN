@@ -1,3 +1,4 @@
+//hooks efeito e estado
 import React, { useEffect, useState } from "react";
 import {
   Container,
@@ -69,45 +70,29 @@ const Home = () => {
         <List list={listNowPlaying} title="Filmes Assistidos Agora" trending={true} />
       </ContainerList>
 
-    
-        {genders.map((item) => {
-          
-          const title = `Filmes de ${item.name}`;
-          return (
-            <ContainerList key={`${item.id}`}>
-              <List list={listTrending} title={title}/>
-            </ContainerList>
-          );
-        })}
+      {genders.map((item) => {
 
+        const title = `Filmes de ${item.name}`;
+        let listMovies = [];
 
-        {listTrending.map((item) =>{
-          const filme = item.id;
-          const genero = item.genre_ids;
-          const results = genero.includes(28);
-         
-          // console.log(results);
-          
-          if (results == true) {
-            console.log(idAcao);
-          }
-
-        //   if(filme == 633954){
-        //     console.log(item.genre_ids[0]);
-        // }
-
-        })}
-
-
-        {/* {genders.map((item) => {
-          const id = ["28"];
-          id.("Ação") 
-
-          console.log(item);
-          
-        })} */}
+        discovers.map((movie) => {
         
+          movie.genre_ids.map((genre) => {
+            //console.log(discovers);
+            if(genre === item.id ) {
+              listMovies.push(movie);
+            }
+            return null;
+          });
+        });
         
+        //retornando a lista de filmes de acordo com o id do genero
+        return (
+          <ContainerList key={`${item.id}`}>
+            <List list={listMovies} title={title} />
+          </ContainerList>
+        );
+      })}
 
     </Container>
   );

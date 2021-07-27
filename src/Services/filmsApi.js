@@ -4,7 +4,7 @@ import api from './api';
 const apikey = 'api_key=e0f7ddbcb7a27757fee3f82310428f34';
 const language = 'language=pt-BR';
 
-//primeiro carousel
+//primeiro 
 export const GetFilmsTrending = (page) => {
     const url = `trending/movie/week?${apikey}&${language}&page=${page}`;
     return api.get(url);
