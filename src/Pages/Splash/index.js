@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container, Logo, ImageBackground } from "./styles";
+import { Container, Logo, ImageBackground } from "./Styles";
 import logo from "../../Assets/logot.png";
 import imageBackground from "../../Assets/splash.png";
  
